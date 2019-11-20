@@ -5,18 +5,18 @@
 
 #define MAX=3;
 
-typedef struct{
+typedef struct key{
   int id;
   int RRN;
-}chave;
+}key;
 
-typedef struct{
+typedef struct NOtreeB{
   int count;
-  chave chave[MAX];
+  key chave[MAX];
   int filhos[MAX+1];
-}treeB;
+}NOtreeB;
 
-Page inicia(int ordem){
+NOtreeB driver(int ordem){
 
   FILE *arq;
   
@@ -24,23 +24,30 @@ Page inicia(int ordem){
     arq=fopen("arvoreB.txt","r+");
   }else{
     arq=fopen("arvoreB.txt","w+");
-
-
   }
-  
-  
+
   treeB *raiz;
   raiz = malloc(sizeof(treeB));
   raiz.count=0;
-  
-
-  
 }
 
 
-int pesquisa(Page raiz, int chave){
+bool pesquisa(int RRN, key chave,int *FOUND_RRN,int *FOUND_POS){
 
-  if()
+  FILE *arq;
+  char buffer[10];
+  int a;
+
+  if(RRN=-1){
+    pritnf("chave nao encontrada")
+  }else{
+    arq=fopen("arvoreB.txt","r");
+    fread(buffer,1,1,"arvoreB.txt");
+    a=atoi(buffer);
+    fseek()
+    
+    
+  }
   
   
   
